@@ -35,14 +35,21 @@ export default {
 					dark: '#020c1b',
 				},
 				gold: {
-					DEFAULT: '#D4AF37',
-					light: '#F6E05E',
-					dark: '#B7791F',
+					DEFAULT: '#10B981', // Changed to techy green
+					light: '#34D399', // Lighter green
+					dark: '#059669', // Darker green
 				},
 				slate: {
-					light: '#CCD6F6',
-					DEFAULT: '#8892B0',
-					dark: '#495670',
+					light: '#E5E7EB', // Lighter text
+					DEFAULT: '#9CA3AF',
+					dark: '#4B5563',
+				},
+				techy: {
+					green: '#10B981',
+					greenLight: '#34D399',
+					greenDark: '#059669',
+					black: '#111827',
+					blackLight: '#1F2937',
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -128,6 +135,13 @@ export default {
 				'spin-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
+				},
+				'typing': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'blink': {
+					'50%': { borderColor: 'transparent' }
 				}
 			},
 			animation: {
@@ -138,7 +152,9 @@ export default {
 				'scale-in': 'scale-in 0.3s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
 				'float-slow': 'float-slow 8s ease-in-out infinite',
-				'spin-slow': 'spin-slow 15s linear infinite'
+				'spin-slow': 'spin-slow 15s linear infinite',
+				'typing': 'typing 3.5s steps(40, end)',
+				'cursor-blink': 'blink 0.75s step-end infinite'
 			}
 		}
 	},

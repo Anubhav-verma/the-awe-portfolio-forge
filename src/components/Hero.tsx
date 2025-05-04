@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import TypeWriter from './TypeWriter';
 
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -24,7 +25,7 @@ const Hero = () => {
     // 3D Points
     const points = [];
     const maxPoints = 150;
-    const pointColor = 'rgba(212, 175, 55, ';
+    const pointColor = 'rgba(16, 185, 129, '; // Updated to techy green
     let mouseX = 0;
     let mouseY = 0;
 
@@ -98,7 +99,7 @@ const Hero = () => {
 
           // Draw line if close enough
           if (distance < 120) {
-            ctx.strokeStyle = `rgba(212, 175, 55, ${(1 - distance / 120) * 0.2})`;
+            ctx.strokeStyle = `rgba(16, 185, 129, ${(1 - distance / 120) * 0.2})`;
             ctx.beginPath();
             ctx.moveTo(projectedX, projectedY);
             ctx.lineTo(otherProjectedX, otherProjectedY);
@@ -130,21 +131,21 @@ const Hero = () => {
       {/* Content */}
       <div className="section-container relative z-10">
         <div className="max-w-4xl">
-          <p className="text-gold text-lg mb-5 opacity-0 animate-fade-in">Hi, my name is</p>
+          <p className="text-techy-green text-lg mb-5 opacity-0 animate-fade-in">Hi, my name is</p>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-3 opacity-0 animate-fade-in animate-delay-100">
             Anubhav Verma.
           </h1>
           
           <h2 className="text-4xl md:text-6xl font-semibold text-slate opacity-0 animate-fade-in animate-delay-200">
-            I build exceptional digital experiences.
+            I <TypeWriter texts={["build exceptional digital experiences.", "create high-performance apps.", "love solving complex problems.", "craft clean, efficient code."]} />
           </h2>
           
           <p className="text-slate text-lg max-w-2xl mt-8 opacity-0 animate-fade-in animate-delay-300">
             I'm a software engineer specializing in building high-performance, robust 
             applications with a focus on exceptional user experiences. Currently, I'm focused on 
             creating enterprise solutions using .NET and optimizing database performance 
-            at <span className="text-gold">Hexure India</span>.
+            at <span className="text-techy-green">Hexure India</span>.
           </p>
           
           <div className="mt-12 opacity-0 animate-fade-in animate-delay-400">

@@ -7,17 +7,17 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
+    --background: 215 28% 17%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 11%;
+    --card: 215 28% 17%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 11%;
+    --popover: 215 28% 17%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 47 65% 52%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 215 28% 17%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -48,7 +48,7 @@
   }
 
   body {
-    @apply bg-navy text-slate-light overflow-x-hidden font-sans;
+    @apply bg-techy-black text-slate-light overflow-x-hidden font-sans;
     cursor: none;
   }
 
@@ -77,11 +77,11 @@
 
   .section-title::after {
     content: "";
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-gold rounded;
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-techy-green rounded;
   }
 
   .timeline-dot {
-    @apply w-4 h-4 rounded-full bg-gold absolute left-0 transform -translate-x-1/2;
+    @apply w-4 h-4 rounded-full bg-techy-green absolute left-0 transform -translate-x-1/2;
   }
 
   .timeline-line {
@@ -93,12 +93,12 @@
   }
 
   .nav-link {
-    @apply text-slate hover:text-gold transition-colors relative;
+    @apply text-slate hover:text-techy-green transition-colors relative;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-gold transition-all duration-300;
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-techy-green transition-all duration-300;
   }
 
   .nav-link:hover::after {
@@ -106,36 +106,42 @@
   }
 
   .glass-card {
-    @apply bg-navy-light/80 backdrop-blur-lg border border-white/10 rounded-lg shadow-lg;
+    @apply bg-techy-blackLight/80 backdrop-blur-lg border border-white/10 rounded-lg shadow-lg;
   }
 
   .button-primary {
-    @apply bg-transparent border border-gold text-gold px-6 py-3 rounded hover:bg-gold/10 transition-all duration-300;
+    @apply bg-transparent border border-techy-green text-techy-green px-6 py-3 rounded hover:bg-techy-green/10 transition-all duration-300;
   }
 
   .button-secondary {
-    @apply bg-navy-light text-white px-6 py-3 rounded hover:bg-navy-light/80 transition-all duration-300;
+    @apply bg-techy-blackLight text-white px-6 py-3 rounded hover:bg-techy-blackLight/80 transition-all duration-300;
   }
 
   /* Cursor styles */
   .cursor-dot {
-    @apply fixed top-0 left-0 w-3 h-3 bg-gold rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out transform -translate-x-1/2 -translate-y-1/2;
+    @apply fixed top-0 left-0 w-3 h-3 bg-techy-green rounded-full pointer-events-none z-50 transition-transform duration-100 ease-out transform -translate-x-1/2 -translate-y-1/2;
   }
 
   .cursor-outline {
-    @apply fixed top-0 left-0 w-8 h-8 border border-gold rounded-full pointer-events-none z-50 transition-transform duration-300 ease-out transform -translate-x-1/2 -translate-y-1/2;
+    @apply fixed top-0 left-0 w-8 h-8 border border-techy-green rounded-full pointer-events-none z-50 transition-transform duration-300 ease-out transform -translate-x-1/2 -translate-y-1/2;
   }
 
   /* Cursor particles */
   .cursor-particle {
-    @apply fixed w-1 h-1 bg-gold/50 rounded-full pointer-events-none z-40 transition-all duration-700;
+    @apply fixed w-1 h-1 bg-techy-green/50 rounded-full pointer-events-none z-40 transition-all duration-700;
     transform: translate(-50%, -50%);
+  }
+
+  /* Typing animation */
+  .typing {
+    @apply overflow-hidden whitespace-nowrap border-r-4 border-techy-green pr-1;
+    animation: typing 3.5s steps(40, end), cursor-blink 0.75s step-end infinite;
   }
 }
 
 @layer utilities {
   .text-highlight {
-    @apply text-gold;
+    @apply text-techy-green;
   }
   
   .animate-delay-100 {

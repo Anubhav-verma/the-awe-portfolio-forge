@@ -20,7 +20,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-navy text-slate-light overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-techy-black text-slate-light overflow-hidden">
       {/* Custom Cursor */}
       <CursorEffect />
       
